@@ -1,26 +1,28 @@
 class sshd {
-	package {
-		"openssh-server": ensure => installed;
+	package { "openssh-server":
+					ensure => installed,
+					provider => apt,
 	}
 
 	file { "/etc/ssh/sshd_config":
-		source	=> [
-			# file path from "puppet:///modules/.../$hostname/... with hostname identifier"
-			# file path from "puppet:///modules/..."
-			"puppet:///modules/sshd/sshd_config",
-		],
-		mode		=> "444",
-		owner 	=> "root",
-		group		=> "root",
-		# package must be installed before configuration file
-		require	=> Package["openssh-server"],
+					ensure  => present,
+					notify  => Service["sshd"],
+					mode    => '444',
+					owner   => 'root',
+					group   => 'root',
+					source  => "puppet:///modules/sshd/sshd_config",
+					require => Package["openssh-server"],
 	}
-	
-	service { "ssh":
-		enable	=> true,
-		ensure	=> running,
-		subscribe	=> File["/etc/ssh/sshd_config"],
+
+	service { "sshd":
+					enable    => true,
+					ensure    => running,
+					subscribe => File["/etc/ssh/sshd_config"],
+					require   => [
+									Package["openssh-server"],
+					],
 	}
+
 
 	ssh_authorized_key { "karmstr7_1":
 		user => "ubuntu",
