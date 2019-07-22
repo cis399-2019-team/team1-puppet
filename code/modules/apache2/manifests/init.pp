@@ -17,7 +17,7 @@ class apache2 {
 	service { "apache2":
 		enable    => true,
 		ensure    => running,
-		subscribe => File["/etc/apache2/apache2.config"],
+		subscribe => File["/etc/apache2/apache2.conf"],
 		require   => [
 						Package["apache2"],
 		],
