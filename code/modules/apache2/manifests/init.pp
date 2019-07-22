@@ -1,10 +1,12 @@
 class apache2 {
 	package { "apache2":
-		ensure => installed,
+		ensure 		=> installed,
+		provider	=> apt,
 	}
 
-	file { "/etc/apache2/apache2.conf":
+	file { "/etc/apache2/apache2_config":
 		ensure  => present,
+		notify 	=> Service["apache2"]
 		mode    => '444',
 		owner   => 'root',
 		group   => 'root',
