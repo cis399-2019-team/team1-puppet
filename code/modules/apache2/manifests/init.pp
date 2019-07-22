@@ -23,7 +23,7 @@ class apache2 {
 		],
 	}
 
-	file {"/var/www/html":
+	file {"/var/www/html/index.html":
 		ensure => directory,
 		recurse => true,
 		mode => '444',
