@@ -32,14 +32,4 @@ class apache2 {
 		source => "puppet:///modules/apache2/html",
 		require => Package["apache2"],
 	}
-
-	# file { "/var/www/html/foo.html":
-	# 	ensure => directory,
-	# 	recurse => true,
-	# 	mode => '0644',
-	# 	owner => 'root',
-	# 	group => 'root',
-	# 	source => "puppet:///modules/apache2/html/foo.html",
-	# 	require => Package["apache2"],
-	# }
 }
