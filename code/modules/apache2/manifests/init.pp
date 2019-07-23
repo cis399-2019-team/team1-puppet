@@ -23,23 +23,23 @@ class apache2 {
 		],
 	}
 
-	file {"/var/www/html/":
+	file {"/var/www/html":
 		ensure => directory,
 		recurse => true,
 		mode => '0644',
 		owner => 'root',
 		group => 'root',
-		source => "puppet:///modules/apache2/html/team1.html",
+		source => "puppet:///modules/apache2/html",
 		require => Package["apache2"],
 	}
 
-	file { "/var/www/html/foo.html":
-		ensure => directory,
-		recurse => true,
-		mode => '0644',
-		owner => 'root',
-		group => 'root',
-		source => "puppet:///modules/apache2/html/foo.html",
-		require => Package["apache2"],
-	}
+	# file { "/var/www/html/foo.html":
+	# 	ensure => directory,
+	# 	recurse => true,
+	# 	mode => '0644',
+	# 	owner => 'root',
+	# 	group => 'root',
+	# 	source => "puppet:///modules/apache2/html/foo.html",
+	# 	require => Package["apache2"],
+	# }
 }
