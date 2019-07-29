@@ -6,7 +6,6 @@ class account {
           ensure      => present,
           home        => '/home/stevev',
           comment     => 'Steve VanDevender',
-          groups      => 'cis399',
           shell       => '/bin/bash',
           managehome  => true,
   }
@@ -22,7 +21,6 @@ class account {
           ensure      => present,
           home        => '/home/jerry',
           comment     => 'Jerry',
-          groups      => 'cis399',
           shell       => '/bin/bash',
           managehome  => true,
   }
@@ -38,7 +36,6 @@ class account {
           ensure      => present,
           home        => '/home/mapu',
           comment     => 'Mapu',
-          groups      => 'cis399',
           shell       => '/bin/bash',
           managehome  => true,
   }
@@ -54,7 +51,6 @@ class account {
           ensure      => present,
           home        => '/home/henzi',
           comment     => 'Henzi',
-          groups      => 'cis399',
           shell       => '/bin/bash',
           managehome  => true,
   }
@@ -70,7 +66,6 @@ class account {
           ensure      => present,
           home        => '/home/owen',
           comment     => 'Owen',
-          groups      => 'cis399',
           shell       => '/bin/bash',
           managehome  => true,
   }
@@ -86,7 +81,6 @@ class account {
           ensure      => present,
           home        => '/home/james',
           comment     => 'James',
-          groups      => 'cis399',
           shell       => '/bin/bash',
           managehome  => true,
   }
@@ -102,7 +96,6 @@ class account {
           ensure      => present,
           home        => '/home/rico',
           comment     => 'Rico',
-          groups      => 'cis399',
           shell       => '/bin/bash',
           managehome  => true,
   }
@@ -118,7 +111,6 @@ class account {
           ensure      => present,
           home        => '/home/kylie',
           comment     => 'Kylie',
-          groups      => 'cis399',
           shell       => '/bin/bash',
           managehome  => true,
   }
@@ -134,7 +126,6 @@ class account {
           ensure      => present,
           home        => '/home/devin',
           comment     => 'Devin',
-          groups      => 'cis399',
           shell       => '/bin/bash',
           managehome  => true,
   }
@@ -150,7 +141,6 @@ class account {
           ensure      => present,
           home        => '/home/lucas',
           comment     => 'Lucas',
-          groups      => 'cis399',
           shell       => '/bin/bash',
           managehome  => true,
   }

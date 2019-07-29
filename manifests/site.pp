@@ -11,3 +11,4 @@ node ip-10-0-1-84 {
 	include apache2
 	include account
 }
+#ip-10-0-1-84.us-west-2.compute.internal
