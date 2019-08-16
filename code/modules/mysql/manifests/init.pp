@@ -1,5 +1,5 @@
 class mysql {
-  package { "mysql":
+  package { "mysql-server":
     ensure    => installed,
     provider  => apt,
   }
@@ -9,14 +9,5 @@ class mysql {
     notify  => Service["mysql"],
     source  => "puppet:///modules/mysql/mysql.cnf",
     require => Package["mysql"],
-  }
-
-  service { "mysql":
-    enable    => true,
-    ensure    => running,
-    subscribe => File["/etc/mysql/mysql.cnf"],
-    require   => [
-      Package["mysql"],
-    ],
   }
 }
