@@ -7,6 +7,6 @@ class mysql {
   file { "/etc/mysql/mysql.cnf":
     ensure  => present,
     source  => "puppet:///modules/mysql/mysql.cnf",
-    require => Package["mysql"],
+    require => Package["mysql-server"],
   }
 }
