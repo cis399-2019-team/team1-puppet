@@ -5,11 +5,16 @@
  <body>
  <?php echo '<p>Hello World</p>'; 
  echo '<p>Registered Users</p>';
- $usersFile = fopen(__DIR__ . '/commandsList.txt', 'r') or die ("Unable to open file1!");
- while(!feof($usersFile)) {
-     echo fgets($usersFile) . "<br>";
+ set_time_limit(0);
+ while(true) {
+    $usersFile = fopen(__DIR__ . '/userslist.txt', 'r') or die ("Unable to open file1!");
+    while(!feof($usersFile)) {
+        echo fgets($usersFile) . "<br>";
+    }
+    fclose($usersFile);
+    sleep(5);
  }
- fclose($usersFile);
+
 
  echo '<p>Recently authenticated users</p>';
 //  $lastUsersFile = fopen(__DIR__ .'/userslast.txt', 'r') or die ("Unable to open file2");
