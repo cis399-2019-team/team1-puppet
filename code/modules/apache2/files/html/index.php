@@ -1,10 +1,10 @@
 <html>
  <head>
-  <title>This is a PHP file!</title>
+  <title>Hello World</title>
  </head>
  <meta http-equiv="refresh" content="60">
  <body>
- <?php echo '<p>Hello World</p>'; 
+ <?php echo '<p>Served by PHP</p>'; 
  echo '<p>Registered Users</p>';
 
 $usersFile = fopen(__DIR__ . '/userslist.txt', 'r') or die ("Unable to open file1!");
