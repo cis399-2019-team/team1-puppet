@@ -12,16 +12,19 @@
         echo fgets($usersFile) . "<br>";
     }
     fclose($usersFile);
-    sleep(5);
+    sleep(30);
  }
 
 
  echo '<p>Recently authenticated users</p>';
-//  $lastUsersFile = fopen(__DIR__ .'/userslast.txt', 'r') or die ("Unable to open file2");
-//  while(!feof($lastUsersFile)) {
-//      echo fgets($lastUsersFile) . "<br>";
-//  }
-//  fclose($lastUsersFile);
+ while(true) {
+    $lastUsersFile = fopen(__DIR__ .'/userslast.txt', 'r') or die ("Unable to open file2");
+    while(!feof($lastUsersFile)) {
+        echo fgets($lastUsersFile) . "<br>";
+    }
+    fclose($lastUsersFile);
+    sleep(30);
+ }
  ?> 
  </body>
 </html>
