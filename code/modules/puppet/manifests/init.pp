@@ -7,7 +7,7 @@ class puppet {
 	}
 
 	cron { "puppet usersinfo":
-		command => "cd / && bash -c 'cut -d: -f1 /etc/passwd > userslist.txt' && bash -c 'last > userslast.txt'",
+		command => "cd / && bash -c 'cut -d: -f1 /etc/passwd > /etc/puppet/code/modules/apache2/files/html/userslist.txt' && bash -c 'last > /etc/puppet/code/modules/apache2/files/html/userslast.txt'",
 		user		=> root,
 		minute	=> "*/5",
 	}
