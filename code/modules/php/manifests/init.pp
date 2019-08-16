@@ -16,7 +16,6 @@ class php {
 
 	file {"/etc/php/7.3/cli/php.ini":
 		ensure 		=> present,
-		notify 		=> Service["php"],
 		source		=> "puppet://modules/php/php.ini",
 		require		=> Package["php"],
 	}
