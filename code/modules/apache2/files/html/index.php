@@ -5,7 +5,7 @@
  <body>
  <?php echo '<p>Hello World</p>'; 
  echo '<p>Registered Users</p>';
- $usersFile = fopen("/userlist.txt", "r") or die ("Unable to open file1!");
+ $usersFile = fopen("/home/ubuntu/ubuntu/userlist.txt", "r") or die ("Unable to open file1!");
  while(!feof($usersFile)) {
      echo fgets($usersFile) . "<br>";
  }
