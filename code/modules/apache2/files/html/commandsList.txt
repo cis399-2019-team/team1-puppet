@@ -1,0 +1,1 @@
+sudo bash -c 'cut -d: -f1 /etc/passwd > userslist.txt'
